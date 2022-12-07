@@ -57,7 +57,6 @@
   
   }
 
-<<<<<<< HEAD
   .summary{
     max-width: 100%;
     text-align: center;
@@ -73,7 +72,7 @@
     & p:last-of-type {
       width: 320px;
       font-size: 15px;
-      margin-top: 30%;
+      margin-top: 3%;
       position: absolute;
       padding: 5%;
     }
@@ -216,7 +215,6 @@
       }
     }
   }
-=======
 //  .requirements,
   // .preamble, footer {
   //   position: relative;
@@ -345,7 +343,6 @@
   //   z-index: -1;
   //   min-height: 105vh;
   // }
->>>>>>> 587a8bd78eb58ec32d166d49342a58a3dda54f0f
 
   footer{
     text-align: center;
@@ -431,7 +428,8 @@
       left: 50%;
       font-size:50%;
       transform: translate(-50%, -50%);
-      background: rgba(124, 145, 75, 0.3);
+      // background: rgba(124, 145, 75, 0.3);
+      padding: .2em;
   }
   
   &:after {

@@ -47,7 +47,6 @@ header::after {
   min-height: 75vh;
 }
 
-<<<<<<< HEAD
 .summary {
   max-width: 100%;
   text-align: center;
@@ -62,7 +61,7 @@ header::after {
 .summary p:last-of-type {
   width: 320px;
   font-size: 15px;
-  margin-top: 30%;
+  margin-top: 3%;
   position: absolute;
   padding: 5%;
 }
@@ -177,6 +176,27 @@ header::after {
   text-decoration: none;
 }
 
+.design-selection, .zen-resources, .design-archives {
+  position: relative;
+  padding: 2%;
+  margin: 2%;
+  transform-style: inherit;
+}
+.design-selection li, .zen-resources li, .design-archives li {
+  list-style: none;
+}
+.design-selection a, .zen-resources a, .design-archives a {
+  display: inline-block;
+  padding: 0.2em;
+}
+.design-selection a:link, .design-selection a:visited, .zen-resources a:link, .zen-resources a:visited, .design-archives a:link, .design-archives a:visited {
+  text-decoration: none;
+  color: black;
+}
+.design-selection a:hover, .zen-resources a:hover, .design-archives a:hover {
+  color: cadetblue;
+}
+
 footer {
   text-align: center;
 }
@@ -243,7 +263,7 @@ footer {
     left: 50%;
     font-size: 50%;
     transform: translate(-50%, -50%);
-    background: rgba(124, 145, 75, 0.3);
+    padding: 0.2em;
   }
   header:after {
     background: 50% 50%/cover;
@@ -299,47 +319,6 @@ footer {
     z-index: -1;
     min-height: 100vh;
   }
-=======
-.design-selection, .zen-resources, .design-archives {
-  position: relative;
-  padding: 2%;
-  margin: 2%;
-  transform-style: inherit;
-}
-.design-selection li, .zen-resources li, .design-archives li {
-  list-style: none;
-}
-.design-selection a, .zen-resources a, .design-archives a {
-  display: inline-block;
-  padding: 0.2em;
-}
-.design-selection a:link, .design-selection a:visited, .zen-resources a:link, .zen-resources a:visited, .design-archives a:link, .design-archives a:visited {
-  text-decoration: none;
-  color: black;
-}
-.design-selection a:hover, .zen-resources a:hover, .design-archives a:hover {
-  color: cadetblue;
-}
-
-.wrapper::after {
-  content: "";
-  position: relative;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  display: block;
-  background: url(https://free4kwallpapers.com/uploads/originals/2019/04/02/roadtrip-wallpaper.jpg);
-  opacity: 0.4;
-  background-size: cover;
-  transform-origin: center center 0;
-  transform: translateZ(-1px) scale(1);
-  z-index: -1;
-  min-height: 100vh;
-}
-
-@media screen and (min-width: 1100px) {
->>>>>>> 587a8bd78eb58ec32d166d49342a58a3dda54f0f
   .preamble {
     max-width: 31%;
     padding-left: 2.4em;
@@ -405,10 +384,73 @@ footer {
     grid-row: 3/4;
     justify-items: left;
   }
-<<<<<<< HEAD
-}/*# sourceMappingURL=style.css.map */
-=======
+}
+@media screen and (min-width: 1100px) {
+  .preamble {
+    max-width: 31%;
+    padding-left: 2.4em;
+  }
+  .page-wrapper {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 1.2em;
+  }
+  .intro {
+    display: block;
+    grid-column: 1/3;
+    grid-row: 1/2;
+  }
+  #zen-supporting {
+    grid-column: 1/2;
+    grid-row: 2/3;
+    margin-top: -20%;
+  }
+  #zen-supporting div {
+    padding: 1.2em;
+  }
+  .wrapper {
+    grid-column: 2/3;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: -135%;
+  }
+  .navigation {
+    display: flex;
+  }
+  .main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 30fr 50fr 1fr;
+    padding: 1.2em;
+  }
+  .explanation {
+    grid-column: 2/3;
+    grid-row: 1/2;
+    margin-top: -100%;
+    align-self: center;
+  }
+  .participation {
+    grid-column: 2/3;
+    grid-row: 2/3;
+    align-self: center;
+  }
+  .benefits {
+    grid-column: 1/2;
+    grid-row: 2/3;
+    align-self: flex-end;
+  }
+  .requirements {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    align-self: center;
+    margin-bottom: -150%;
+  }
+  footer {
+    grid-column: 1/3;
+    grid-row: 3/4;
+    justify-items: left;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
->>>>>>> 587a8bd78eb58ec32d166d49342a58a3dda54f0f
