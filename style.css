@@ -1,6 +1,6 @@
 body {
   margin: auto;
-  background: rgba(29, 45, 44, 0.3);
+  background: rgba(29, 45, 44, 0.2);
 }
 
 p a:link, p a:visited {
@@ -18,7 +18,6 @@ header {
   font-weight: 300;
   font-size: 20px;
   letter-spacing: 10px;
-  background: rgba(196, 147, 117, 0.2);
 }
 header h1 {
   width: 70%;
@@ -36,7 +35,7 @@ header h2 {
   left: 50%;
   font-size: 15px;
   transform: translate(-50%, -50%);
-  background: rgba(177, 181, 187, 0.7);
+  background: rgba(177, 181, 187, 0.8);
   color: #d4502c;
 }
 header::after {
@@ -59,8 +58,21 @@ header::after {
 .summary {
   max-width: 100%;
   text-align: center;
-  background: rgba(177, 181, 187, 0.7);
   font-family: "Quicksand", sans-serif;
+}
+.summary p {
+  background: rgba(177, 181, 187, 0.8);
+}
+.summary p:first-of-type {
+  position: absolute;
+  padding: 5%;
+}
+.summary p:last-of-type {
+  position: absolute;
+  transform: translate(10%, 700%);
+}
+.summary p:last-of-type a {
+  color: #d4502c;
 }
 .summary::after {
   content: "";
@@ -89,10 +101,11 @@ header::after {
   max-width: 80%;
   padding: 5%;
   text-align: left;
-  background: rgba(177, 181, 187, 0.7);
+  background: rgba(191, 163, 123, 0.6);
   color: #d4502c;
   font-family: "Carter One", cursive;
-  box-shadow: 5px 0px 5px 5px rgba(177, 181, 187, 0.8);
+  box-shadow: 5px 0px 5px 5px rgba(177, 181, 187, 0.5);
+  border-radius: 5px;
 }
 .preamble p {
   padding-left: 7%;
@@ -107,10 +120,11 @@ header::after {
   margin-left: 10%;
   padding: 5%;
   text-align: right;
-  background: rgba(177, 181, 187, 0.7);
+  background: rgba(191, 163, 123, 0.6);
   color: #d4502c;
   font-family: "Carter One", cursive;
-  box-shadow: 5px 0px 5px 5px rgba(177, 181, 187, 0.8);
+  box-shadow: 5px 0px 5px 5px rgba(177, 181, 187, 0.5);
+  border-radius: 5px;
 }
 .supporting p {
   padding-left: 7%;
@@ -146,7 +160,7 @@ header::after {
   max-width: 100%;
   padding: 3%;
   text-align: center;
-  background: #CBD1D1;
+  background: white;
   color: #d4502c;
   font-family: "Carter One", cursive;
 }
@@ -190,7 +204,7 @@ footer a:link, footer a:visited {
   max-width: 100%;
   padding: 3%;
   text-align: center;
-  background: #CBD1D1;
+  background: white;
   color: #d4502c;
   font-family: "Carter One", cursive;
 }
@@ -216,7 +230,7 @@ footer a:link, footer a:visited {
   max-width: 100%;
   padding: 3%;
   text-align: center;
-  background: #CBD1D1;
+  background: white;
   color: #d4502c;
   font-family: "Carter One", cursive;
 }
@@ -307,10 +321,13 @@ footer a:link, footer a:visited {
     z-index: -1;
     min-height: 100vh;
   }
-  .summary header p:last-of-type {
-    font-size: 5px;
+  .summary p:first-of-type {
     position: absolute;
-    padding: 5%;
+    padding: 2%;
+  }
+  .summary p:last-of-type {
+    position: absolute;
+    transform: translate(80%, 400%);
   }
   .design-selection, .zen-resources, .design-archives {
     position: relative;
@@ -415,5 +432,8 @@ footer a:link, footer a:visited {
     grid-column: 1/3;
     grid-row: 3/4;
     justify-items: left;
+  }
+  aside {
+    transform: translate(0%, 15%);
   }
 }/*# sourceMappingURL=style.css.map */
