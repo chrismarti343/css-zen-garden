@@ -1,5 +1,14 @@
 body {
-  margin: 0;
+  margin: auto;
+  background: rgba(29, 45, 44, 0.3);
+}
+
+p a:link, p a:visited {
+  text-decoration: none;
+  color: #BFA37B;
+}
+p a:hover {
+  color: #d4502c;
 }
 
 header {
@@ -53,18 +62,6 @@ header::after {
   background: rgba(177, 181, 187, 0.7);
   font-family: "Quicksand", sans-serif;
 }
-.summary p:first-of-type {
-  font-size: 15px;
-  position: absolute;
-  padding: 5%;
-}
-.summary p:last-of-type {
-  width: 320px;
-  font-size: 15px;
-  margin-top: 3%;
-  position: absolute;
-  padding: 5%;
-}
 .summary::after {
   content: "";
   width: 100%;
@@ -85,6 +82,7 @@ header::after {
 }
 
 .preamble {
+  max-width: 100%;
   padding-bottom: 9%;
 }
 .preamble h3 {
@@ -176,37 +174,63 @@ header::after {
   text-decoration: none;
 }
 
-.design-selection, .zen-resources, .design-archives {
-  position: relative;
-  padding: 2%;
-  margin: 2%;
-  transform-style: inherit;
+footer {
+  text-align: center;
+  font-size: 1.2em;
 }
-.design-selection li, .zen-resources li, .design-archives li {
-  list-style: none;
-}
-.design-selection a, .zen-resources a, .design-archives a {
-  display: inline-block;
-  padding: 0.2em;
-}
-.design-selection a:link, .design-selection a:visited, .zen-resources a:link, .zen-resources a:visited, .design-archives a:link, .design-archives a:visited {
+footer a:link, footer a:visited {
   text-decoration: none;
-  color: black;
-}
-.design-selection a:hover, .zen-resources a:hover, .design-archives a:hover {
-  color: cadetblue;
+  color: #BFA37B;
 }
 
-footer {
+.design-archives {
+  padding-bottom: 7%;
+}
+.design-archives h3 {
+  max-width: 100%;
+  padding: 3%;
+  text-align: center;
+  background: #CBD1D1;
+  color: #d4502c;
+  font-family: "Carter One", cursive;
+}
+.design-archives ul {
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}
+.design-archives ul li {
+  list-style-type: none;
+}
+.design-archives ul li a {
+  text-decoration: none;
+  color: #4B7470;
+  align-items: center;
   text-align: center;
 }
 
 .zen-resources {
-  display: inline-block;
-  width: 40%;
-  margin-right: 9%;
-  height: 100%;
-  vertical-align: top;
+  padding-bottom: 7%;
+}
+.zen-resources h3 {
+  max-width: 100%;
+  padding: 3%;
+  text-align: center;
+  background: #CBD1D1;
+  color: #d4502c;
+  font-family: "Carter One", cursive;
+}
+.zen-resources ul {
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}
+.zen-resources ul li {
+  list-style-type: none;
+}
+.zen-resources ul li a {
+  text-decoration: none;
+  color: #4B7470;
 }
 
 @media (min-width: 480px) {
@@ -263,7 +287,7 @@ footer {
     left: 50%;
     font-size: 50%;
     transform: translate(-50%, -50%);
-    padding: 0.2em;
+    background: rgba(124, 145, 75, 0.3);
   }
   header:after {
     background: 50% 50%/cover;
@@ -283,9 +307,15 @@ footer {
     z-index: -1;
     min-height: 100vh;
   }
+  .summary header p:last-of-type {
+    font-size: 5px;
+    position: absolute;
+    padding: 5%;
+  }
   .design-selection, .zen-resources, .design-archives {
     position: relative;
     padding: 2%;
+    width: 100%;
     margin: 2%;
     transform-style: inherit;
   }
@@ -301,7 +331,7 @@ footer {
     color: black;
   }
   .design-selection a:hover, .zen-resources a:hover, .design-archives a:hover {
-    color: cadetblue;
+    color: #d4502c;
   }
   .wrapper::after {
     content: "";
@@ -321,7 +351,9 @@ footer {
   }
   .preamble {
     max-width: 31%;
-    padding-left: 2.4em;
+  }
+  .design-selection nav ul {
+    grid-template-columns: auto;
   }
   .page-wrapper {
     display: grid;
@@ -344,9 +376,9 @@ footer {
   }
   .wrapper {
     grid-column: 2/3;
-    display: flex;
-    flex-wrap: wrap;
-    margin-top: -135%;
+    display: grid;
+    grid-auto-rows: 3fr 1fr 1fr;
+    margin-top: -180%;
   }
   .navigation {
     display: flex;
@@ -384,73 +416,4 @@ footer {
     grid-row: 3/4;
     justify-items: left;
   }
-}
-@media screen and (min-width: 1100px) {
-  .preamble {
-    max-width: 31%;
-    padding-left: 2.4em;
-  }
-  .page-wrapper {
-    display: grid;
-    grid-template-columns: 3fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    gap: 1.2em;
-  }
-  .intro {
-    display: block;
-    grid-column: 1/3;
-    grid-row: 1/2;
-  }
-  #zen-supporting {
-    grid-column: 1/2;
-    grid-row: 2/3;
-    margin-top: -20%;
-  }
-  #zen-supporting div {
-    padding: 1.2em;
-  }
-  .wrapper {
-    grid-column: 2/3;
-    display: flex;
-    flex-wrap: wrap;
-    margin-top: -135%;
-  }
-  .navigation {
-    display: flex;
-  }
-  .main {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 30fr 50fr 1fr;
-    padding: 1.2em;
-  }
-  .explanation {
-    grid-column: 2/3;
-    grid-row: 1/2;
-    margin-top: -100%;
-    align-self: center;
-  }
-  .participation {
-    grid-column: 2/3;
-    grid-row: 2/3;
-    align-self: center;
-  }
-  .benefits {
-    grid-column: 1/2;
-    grid-row: 2/3;
-    align-self: flex-end;
-  }
-  .requirements {
-    grid-column: 1/2;
-    grid-row: 1/2;
-    align-self: center;
-    margin-bottom: -150%;
-  }
-  footer {
-    grid-column: 1/3;
-    grid-row: 3/4;
-    justify-items: left;
-  }
-}
-
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */
