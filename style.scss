@@ -141,6 +141,19 @@ background: 50% 50% / cover;
     li{
       list-style: none;
     }
+    a{
+      display: inline-block;
+      padding: .2em;
+      // font-size: 1.2em;
+    }
+    a:link, a:visited{
+      text-decoration: none;
+      color: black;
+    }
+    a:hover{
+      color: cadetblue;
+      // font-size: 1.2em;
+    }
   }
 
   // .design-selection{

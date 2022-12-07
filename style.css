@@ -86,6 +86,17 @@ header::after {
 .design-selection li, .zen-resources li, .design-archives li {
   list-style: none;
 }
+.design-selection a, .zen-resources a, .design-archives a {
+  display: inline-block;
+  padding: 0.2em;
+}
+.design-selection a:link, .design-selection a:visited, .zen-resources a:link, .zen-resources a:visited, .design-archives a:link, .design-archives a:visited {
+  text-decoration: none;
+  color: black;
+}
+.design-selection a:hover, .zen-resources a:hover, .design-archives a:hover {
+  color: cadetblue;
+}
 
 .wrapper::after {
   content: "";
