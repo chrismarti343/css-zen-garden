@@ -72,7 +72,7 @@ header::after {
   transform: translate(10%, 700%);
 }
 .summary p:last-of-type a {
-  color: #d4502c;
+  color: #BFA37B;
 }
 .summary::after {
   content: "";
@@ -188,6 +188,11 @@ header::after {
   text-decoration: none;
 }
 
+p a:link, p a:visited {
+  text-decoration: none;
+  color: #BFA37B;
+}
+
 footer {
   text-align: center;
   font-size: 1.2em;
@@ -270,6 +275,12 @@ footer a:link, footer a:visited {
   h3 {
     font-size: 110%;
   }
+  .supporting .participation h3, .supporting .requirements h3 {
+    text-align: center;
+  }
+  .preamble h3, .supporting h3, .requirements h3, .participation h3, .benefits h3 {
+    text-align: center;
+  }
   p {
     font-size: 110%;
     line-height: 150%;
@@ -321,13 +332,22 @@ footer a:link, footer a:visited {
     z-index: -1;
     min-height: 100vh;
   }
+  .summary {
+    display: block;
+    text-align: center;
+  }
   .summary p:first-of-type {
     position: absolute;
     padding: 2%;
+    left: 0%;
+    right: 0%;
+    bottom: -24%;
   }
   .summary p:last-of-type {
     position: absolute;
-    transform: translate(80%, 400%);
+    left: -12%;
+    right: 0%;
+    bottom: 4.1%;
   }
   .design-selection, .zen-resources, .design-archives {
     position: relative;
@@ -345,32 +365,18 @@ footer a:link, footer a:visited {
   }
   .design-selection a:link, .design-selection a:visited, .zen-resources a:link, .zen-resources a:visited, .design-archives a:link, .design-archives a:visited {
     text-decoration: none;
-    color: black;
-  }
-  .design-selection a:hover, .zen-resources a:hover, .design-archives a:hover {
-    color: #d4502c;
-  }
-  .wrapper::after {
-    content: "";
-    position: relative;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    display: block;
-    background: url(https://free4kwallpapers.com/uploads/originals/2019/04/02/roadtrip-wallpaper.jpg);
-    opacity: 0.4;
-    background-size: cover;
-    transform-origin: center center 0;
-    transform: translateZ(-1px) scale(1);
-    z-index: -1;
-    min-height: 100vh;
+    color: #BFA37B;
   }
   .preamble {
     max-width: 31%;
   }
   .design-selection nav ul {
     grid-template-columns: auto;
+  }
+  .design-archives ul > li, .zen-resources ul > li {
+    padding: 2%;
+    text-align: left;
+    font-size: large;
   }
   .page-wrapper {
     display: grid;
@@ -395,7 +401,8 @@ footer a:link, footer a:visited {
     grid-column: 2/3;
     display: grid;
     grid-auto-rows: 3fr 1fr 1fr;
-    margin-top: -180%;
+    gap: 1em;
+    margin-top: -300%;
   }
   .navigation {
     display: flex;
@@ -409,7 +416,7 @@ footer a:link, footer a:visited {
   .explanation {
     grid-column: 2/3;
     grid-row: 1/2;
-    margin-top: -100%;
+    margin-top: -200%;
     align-self: center;
   }
   .participation {
@@ -433,7 +440,6 @@ footer a:link, footer a:visited {
     grid-row: 3/4;
     justify-items: left;
   }
-  aside {
-    transform: translate(0%, 15%);
-  }
-}/*# sourceMappingURL=style.css.map */
+}
+
+/*# sourceMappingURL=style.css.map */

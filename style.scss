@@ -85,7 +85,7 @@ $breakpoint-alpha: 480px;
       transform: translate(10%, 700%);
       
       a{
-        color:#d4502c;
+        color:#BFA37B;
       }
     }
 
@@ -231,6 +231,12 @@ $breakpoint-alpha: 480px;
       }
     }
   }
+  p{
+    a:link, a:visited{
+      text-decoration: none;
+      color: #BFA37B;
+    }
+  }
 
   footer{
     text-align: center;
@@ -343,6 +349,18 @@ $breakpoint-alpha: 480px;
       font-size: 110%;
     }
     
+    .supporting .participation, .supporting .requirements{
+      h3{
+        text-align: center;
+      }
+    }
+
+    .preamble, .supporting, .requirements, .participation, .benefits{
+      h3{
+        text-align: center;
+      }
+    }
+
     p {
       font-size: 110%;
       line-height: 150%;
@@ -409,20 +427,26 @@ $breakpoint-alpha: 480px;
 }
 
   .summary {
-
-  
+    display: block;
+    text-align: center;
     p:first-of-type{
       position: absolute;
       padding: 2%;
+      left: 0%;
+      right: 0%;
+      bottom: -24%;
       
     }
 
     p:last-of-type{
       position: absolute;
-      transform: translate(80%, 400%);
+      // transform: translate(80%, 400%);
+      left: -12%;
+      right: 0%;
+      bottom: 4.1%;
     }
+  }
 
-}
 
   
   // SIDEBAR
@@ -445,39 +469,45 @@ $breakpoint-alpha: 480px;
       }
       a:link, a:visited{
         text-decoration: none;
-        color: black;
+        color: #BFA37B;
       }
-      a:hover{
-        color: #d4502c;
-        // font-size: 1.2em;
-      }
+
     }
   
-    .wrapper::after{
-      content: "";
-      position: relative;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      display: block;
-      background: url(https://free4kwallpapers.com/uploads/originals/2019/04/02/roadtrip-wallpaper.jpg);
-      opacity: 0.4;
-      background-size: cover;
-      transform-origin: center center 0;
-      transform: translateZ(-1px) scale(1);
-      z-index: -1;
-      min-height: 100vh;
+    // .wrapper::after{
+    //   content: "";
+    //   position: relative;
+    //   top: 0;
+    //   left: 0;
+    //   right: 0;
+    //   bottom: 0;
+    //   display: block;
+    //   background: url(https://free4kwallpapers.com/uploads/originals/2019/04/02/roadtrip-wallpaper.jpg);
+    //   opacity: 0.4;
+    //   background-size: cover;
+    //   transform-origin: center center 0;
+    //   transform: translateZ(-1px) scale(1);
+    //   z-index: -1;
+    //   min-height: 100vh;
   
-    }
+    // }
 
     .preamble{
       max-width: 31%;
       
       // margin-bottom: -5%;
     }
+
     .design-selection nav ul{
       grid-template-columns: auto;
+    }
+
+    .design-archives, .zen-resources{
+      ul>li{
+        padding: 2%;
+        text-align: left;
+        font-size: large;
+      }
     }
   
     // The Full Page Grid in the right spaces
@@ -506,7 +536,8 @@ $breakpoint-alpha: 480px;
     grid-column: 2/3;
     display: grid;
     grid-auto-rows: 3fr 1fr 1fr;
-    margin-top: -180%;
+    gap: 1em;
+    margin-top: -300%;
   }
   .navigation{
     display: flex;
@@ -526,7 +557,7 @@ $breakpoint-alpha: 480px;
   .explanation{
     grid-column: 2/3;
     grid-row: 1/2;
-    margin-top: -100%;
+    margin-top: -200%;
     align-self: center;
   }
   .participation{
@@ -556,9 +587,9 @@ $breakpoint-alpha: 480px;
 
   }
 
-  aside{
-    transform: translate(0%, 15%);
-  }
+  // aside{
+  //   transform: translate(0%, 15%);
+  // }
 
   }
   
